@@ -9,5 +9,13 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	$('#like').click(likeHandler);
+
 	// your code here
+}
+
+function likeHandler(e) {
+	e.preventDefault();
+	ga("send","event",'like','click');
+
 }
